@@ -58,7 +58,6 @@ public class SmartHomeController {
             turnOn.doAction();
         }
         // If no motion is detected for one minute, or if it is morning or day, turn the light off.
-//        else if (time.Subtract(LastMotionTime) > TimeSpan.FromMinutes(1) || (timeOfDay == "Morning" || timeOfDay == "Noon"))
         else if (this.lastMotionTime.getMinute() - this.lastMotionTime.getMinute() > 1 || (timeOfDay == "Morning" || timeOfDay == "Noon"))
         {
             turnOff.doAction();
