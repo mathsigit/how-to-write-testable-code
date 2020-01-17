@@ -13,10 +13,13 @@ class SmartHomeControllerTest {
 
     @Test
     public void testActuateLights() {
-            LocalDateTime time = LocalDateTime.of(2018, 10, 1, 6, 0, 0);
-            SmartHomeController controller = new SmartHomeController(new FakeDateTimeProvider(time));
-            controller.actuateLights(true);
-            Assertions.assertEquals(time, controller.getLastMotionTime());
+        // Arrange
+        LocalDateTime time = LocalDateTime.of(2018, 10, 1, 6, 0, 0);
+        SmartHomeController controller = new SmartHomeController(new FakeDateTimeProvider(time));
+        // Act
+        controller.actuateLights(true);
+        // Assert
+        Assertions.assertEquals(time, controller.getLastMotionTime());
     }
 
     /*
